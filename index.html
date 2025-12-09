@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>WahanaKu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    ><title>BACKGROUND MUSIC </title>
+<audio id="bgMusic" autoplay loop>
+    <source src="lagu.mp3" type="audio/mp3">
+</audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+document.addEventListener("click", function(){
+    music.play();
+});
+</script>
+<p>Klik di mana saja supaya musik jalan</p>
+</body>
+</html>
+
+<!-- HEADER -->
+<header>
+    <h2>WahanaKu</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Wahana</a>
+        <a href="#">Coming Soon</a>
+        <a href="#">Kontak</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Selamat Datang di WahanaKu</h1>
+    <p>Nikmati berbagai wahana seru bersama keluarga</p>
+</section>
+
+<!-- SLIDER -->
+<div class="slider">
+    <img src="slide1.jpg" class="slide active" alt="Slide 1">
+    <img src="slide2.jpg" class="slide" alt="Slide 2">
+    <img src="slide3.jpg" class="slide" alt="Slide 3">
+</div>
+
+<!-- CONTENT -->
+<section class="content">
+    <h2>Wahana Favorit</h2>
+    <div class="cards">
+        <div class="card">
+             <img src="rolercoster.jpg" alt="Roller Coaster">
+            <h3>Roller Coaster</h3>
+            <p>Uji adrenalinmu di lintasan cepat!</p>
+        </div>
+
+        <div class="card">
+            <img src="bianglala.jpg" alt="Bianglala">
+            <h3>Bianglala</h3>
+            <p>Nikmati pemandangan dari ketinggian.</p>
+        </div>
+
+        <div class="card">
+            <img src="rumah hantu.jpg" alt="Rumah Hantu">
+            <h3>Rumah Hantu</h3>
+            <p>Berani masuk?</p>
+        </div>
+    </div>
+</section>
+
+<!-- COMING SOON -->
+<section class="coming">
+    <h2>Coming Soon</h2>
+
+    <div class="cards SLIDER">
+        <div class="card soon">
+ <img src="wahanaAir.jpg" alt="wahanaAir">
+            <h3>Wahana Air</h3>
+            <p>Serunya main basah-basahan</p>
+        </div>
+
+        <div class="card soon">
+             <img src="skyDrop.jpg" alt="skyDrop">
+            <h3>Sky Drop</h3>
+            <p>Jatuh dari ketinggian ekstrim!</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 WahanaKu kelompok 1 |Dian shinta , Depsi yulinda, Abdul Rahman</p>
+</footer>
+
+
+<!-- SLIDER SCRIPT -->
+<script>
+    let slides = document.querySelectorAll('.slide');
+    let index = 0;
+
+    setInterval(() => {
+        slides[index].classList.remove('active');
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active');
+    }, 3000);
+</script>
+
+</body>
+</html>
